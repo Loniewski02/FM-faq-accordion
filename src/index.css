@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+	.x-center {
+		transform: translate(-50%, -50%);
+	}
+}
+
+@layer base {
+	* {
+		@apply m-0 box-border p-0;
+	}
+
+	body {
+		font-family: 'Work Sans', sans-serif;
+		background-image: url('./assets/background-pattern-mobile.svg');
+
+		@apply flex min-h-[100dvh] bg-[50%_0] bg-no-repeat bg-[length:100%] items-center bg-LightPink
+			justify-center p-6;
+	}
+
+	@media (min-width: 576px) {
+		body {
+			background-image: url('./assets/background-pattern-desktop.svg');
+		}
+	}
+
+	#root {
+		@apply flex justify-center items-baseline h-full w-full;
+	}
+}
